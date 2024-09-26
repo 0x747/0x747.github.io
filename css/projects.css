@@ -2,7 +2,7 @@
     width: 70%;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 992px) {
     .projects-table {
         width: 100%;
     }

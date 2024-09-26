@@ -32,7 +32,7 @@ body {
     font-size: 1.05rem;
 }
 
-.hostname {
+.cmd-hostname {
     color: var(--green);
 }
 
@@ -74,7 +74,7 @@ svg {
     fill: green;
 }
 
-.category {
+.hostname {
     text-decoration: none;
     color: var(--orange);
 }
@@ -93,6 +93,11 @@ a:hover {
     text-decoration: underline;
 }
 
+a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
 .red {
     color: red;
 }
@@ -102,11 +107,11 @@ a:hover {
 }
 
 .yellow {
-    color:yellow;
+    color: yellow;
 }
 
 .black {
-    color: rgb(86, 86, 86);
+    color: rgb(75, 75, 75);
 }
 
 .white {
@@ -114,5 +119,13 @@ a:hover {
 }
 
 .purple {
-    color: purple;
+    color: rgb(175, 75, 175);
+}
+
+.light-orange {
+    color: orange
+}
+
+.orange {
+    color: orangered;
 }

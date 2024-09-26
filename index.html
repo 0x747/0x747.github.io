@@ -6,10 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/resume.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <title>/home/mp</title>
+    <title>/home/root</title>
 </head>
 <body>
     <button type="button" class="power-button" id="powerButton" style="display: none;" onclick="powerOn()">
@@ -19,7 +20,7 @@
         <div class="neofetch" id="neofetch">
             <pre id="logo"></pre>
             <div>
-                <a class="category" href="http://github.com/0x747">github.com/0x747</a>
+                <a class="hostname" href="http://github.com/0x747" id="hostname">github.com/0x747</a>
                 <p>----------------</p>
                 <p class="category">OS: <span class="description" id="os"></span></p>
                 <p class="category">Browser: <span class="description" id="browser"></span></p>
@@ -36,7 +37,7 @@
         <div id="terminal">
             <div class="line" id="line">
                 <p>
-                    <span class="hostname">[mp]</span>:<span class="tilde">~</span>$&nbsp
+                    <span class="cmd-hostname">[root]</span>:<span class="tilde">~</span>$&nbsp
                 </p>
                 <input class="text-line" id="textbox0" type="text" onkeydown="onEnter(event)">
             </div>

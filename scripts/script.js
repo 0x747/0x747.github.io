@@ -4,7 +4,7 @@ let textbox0 = document.getElementById("textbox0");
 textbox0.value = "";
 textbox0.focus();
 
-window.setInterval(() => {document.getElementById(`textbox${id}`).focus()}, 2000);
+window.setInterval(() => {document.getElementById(`textbox${id}`).focus()}, 500);
 
 let commandHistory = [];
 
@@ -53,11 +53,12 @@ async function getHTML(filename) {
 }
 
 let id = 0;
-let hostname = "[mp]";
+let hostname = "[root]";
 let historyIndex;
 
 async function onEnter(e) {
     if (e.code === "Enter") {
+        window.scrollTo(0, document.body.scrollHeight);
         historyIndex = 1
         const command = document.getElementById(`textbox${id}`).value.trim();
 
@@ -77,6 +78,8 @@ async function onEnter(e) {
                     return;
                 case 3:
                     clearTerminal();
+                    commandHistory = [];
+                    historyIndex = 1;
                     document.getElementById("screen").style.display = "none";
                     document.body.style.backgroundColor = "black";
                     document.getElementById("powerButton").style.display = "block";
@@ -137,7 +140,7 @@ function createNewLine() {
 
     // span elements
     tildeSpan.className = "tilde";
-    hostnameSpan.className = "hostname";
+    hostnameSpan.className = "cmd-hostname";
     p.appendChild(hostnameSpan);
     hostnameSpan.appendChild(document.createTextNode(hostname));
     p.appendChild(document.createTextNode(":"));
@@ -168,7 +171,7 @@ function clearTerminal() {
     terminal.innerHTML = 
     `<div class="line" id="line">
         <p>
-            <span class="hostname">${hostname}</span>:<span class="tilde">~</span>$&nbsp
+            <span class="cmd-hostname">${hostname}</span>:<span class="tilde">~</span>$&nbsp
         </p>
         <input class="text-line" id="textbox0" type="text" onkeydown="onEnter(event)">
     </div>
@@ -216,11 +219,16 @@ function generateProjectSummary(projects) {
             name.className = "bold project-name";
             name.innerHTML = projectName
 
+            const link = document.createElement("a");
+            link.href = projects[i].html_url
+            link.innerHTML = "<br>[see project]";
+
             const description = document.createElement("td");
             description.innerHTML = projects[i].description;
             description.className = "description";
             description.style.paddingBottom = "10px";
 
+            name.appendChild(link);
             project.appendChild(name);
             project.appendChild(description);
             projectContainer.appendChild(project);
