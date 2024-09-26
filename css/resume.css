@@ -1,0 +1,32 @@
+@import url("colors.css");
+
+.description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.resume-table {
+    width: 70%;
+}
+
+@media screen and (max-width: 1000px) {
+    .resume-table {
+        width: 100%;
+    }
+}
+
+.heading {
+    font-size: 1.25rem;
+    text-decoration:underline;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.item {
+    width: 200px;
+    vertical-align: top;
+}

@@ -2,21 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" type="text/css">
-    <title>/home</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/resume.css">
+    <link rel="stylesheet" type="text/css" href="css/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>/home/mp</title>
 </head>
-<body onload="setDefaultBackground()">
-    <div class="container">
-        <div class="options">
-            <a href="index.html">home</a>
-            <a href="resume.html">resume</a>
-            <a href="projects.html">projects</a>
-            <a href="https://github.com/0x747">github</a>
+<body>
+    <button type="button" class="power-button" id="powerButton" style="display: none;" onclick="powerOn()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M479.68-59q-86.32 0-163.65-32.6-77.32-32.61-134.57-89.86T91.6-316.03Q59-393.36 59-479.88q0-88.06 33.42-165.04Q125.85-721.9 182-780l65 65q-42.95 42.55-69.97 104.95Q150-547.66 150-479.77 150-343 246.62-246.5 343.23-150 480-150q136.51 0 233.26-96.62Q810-343.23 810-479.77q0-67.89-25.03-130.28Q759.95-672.45 715-715l65-65q55 58 88.5 134.9Q902-568.19 902-479.73q0 86.11-32.93 163.28-32.92 77.17-90.49 134.65Q721-124.33 644.13-91.66 567.26-59 479.68-59ZM435-425v-477h91v477h-91Z"/></svg>
+    </button>
+    <div id="screen">
+        <div class="neofetch" id="neofetch">
+            <pre id="logo"></pre>
+            <div>
+                <a class="category" href="http://github.com/0x747">github.com/0x747</a>
+                <p>----------------</p>
+                <p class="category">OS: <span class="description" id="os"></span></p>
+                <p class="category">Browser: <span class="description" id="browser"></span></p>
+                <p class="category">Engine: <span class="description" id="engine"></span></p>
+                <p class="category">CPU Cores: <span class="description" id="cores"></span></p>
+                <p class="category">Memory: <span class="description" id="memory"></span></p>
+                <p class="category">Language: <span class="description" id="language"></span></p>
+                <p class="category">Time: <span class="description" id="time"></span></p>
+            </div>
         </div>
-        <div class="picture" id="picture" onclick="changeBackground()"></div>
+        <br>
+        <p style="color: white;">Type 'help' and press ENTER to get started.</p>
+        <br>
+        <div id="terminal">
+            <div class="line" id="line">
+                <p>
+                    <span class="hostname">[mp]</span>:<span class="tilde">~</span>$&nbsp
+                </p>
+                <input class="text-line" id="textbox0" type="text" onkeydown="onEnter(event)">
+            </div>
+        </div>
     </div>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/platform.js"></script>
+    <script src="scripts/osLogos.js"></script>
+    <script src="scripts/neofetch.js"></script>
 </body>
 </html>
