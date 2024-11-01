@@ -23,6 +23,7 @@ const pinnedProjects = {
     "discord-bot": true,
     "IMDb-Scraper": true,
     "Vehicles-Explode-When-Flipped": true,
+    "capture-the-flag": true,
 }
 
 async function getHTML(filename) {
