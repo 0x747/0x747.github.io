@@ -1,0 +1,255 @@
+:root {
+    --background: #fdf6e3; /* Base03 */
+    --border: #657b83; /* Base01 */
+    --window-title: #657b83; /* Base1 */
+    --text: #586e75; /* Base0 */
+    --cyan: #2aa198; /* Cyan */
+    --yellow: #b58900; /* Yellow */
+    --blue: #268bd2; /* Blue */
+    --magenta: #d33682; /* Magenta */
+    --bright-text: #eee8d5; /* Base2 */
+    --orange: #cb4b16; /* Orange */
+    --violet: #6c71c4; /* Violet, Purple */
+    --green: #859900; /* Green */
+    --red: #dc322f; /* Red */
+
+    --purple: #6c71c4; /* Violet, Purple */
+    --border-width: 2px; 
+    --black: #073642;
+    --white: #657b83;
+}
+
+.color-pallete {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-pallete div:nth-child(1)  {
+    height: 30px;
+    width: 40px;
+    border: 1px solid var(--border);
+    background-color: var(--background);
+}
+
+.color-pallete div:nth-child(2)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--border);
+}
+
+
+.color-pallete div:nth-child(3)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--text);
+}
+
+.color-pallete div:nth-child(4)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--bright-text);
+}
+
+.color-pallete div:nth-child(5)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--cyan);
+}
+
+.color-pallete div:nth-child(6)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--green);
+}
+
+.color-pallete div:nth-child(7)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--blue);
+}
+
+.color-pallete div:nth-child(8)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--black);
+}
+
+.color-pallete div:nth-child(9)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--violet);
+}
+
+.color-pallete div:nth-child(10)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--magenta);
+}
+
+.color-pallete div:nth-child(11)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--orange);
+}
+
+.color-pallete div:nth-child(12)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--red);
+}
+
+.color-pallete div:nth-child(13)  {
+    height: 30px;
+    width: 40px;
+    background-color: var(--yellow);
+}
+
+body {
+    background-color: var(--background);
+    /* transition: background-color 0.3s, color 0.3s; */
+}
+
+.window-title {
+    border-left: var(--border-width) solid var(--border);
+    border-right: var(--border-width) solid var(--border);
+    color: var(--window-title);
+}
+
+fieldset {
+    border: var(--border-width) solid var(--border);
+}
+
+::selection {
+    background-color: var(--blue);
+    color: var(--bright-text);
+}
+
+::-moz-selection {
+    background-color: var(--blue);
+    color: var(--bright-text);
+}
+
+.navbar {
+    color: var(--text);
+    border: var(--border-width) solid var(--blue);
+}
+
+.navbar .window-title {
+    border-left: var(--border-width) solid var(--blue);
+    border-right: var(--border-width) solid var(--blue);
+}
+
+.navbar p:hover {
+    cursor: pointer;
+    color: var(--bright-text);
+    background-color: var(--blue);
+}
+
+.navbar a {
+    color: var(--text);
+}
+
+.navbar svg {
+    fill: var(--text);
+}
+
+.navbar a:hover {
+    cursor: pointer;
+    color: var(--bright-text);
+    background-color: var(--blue);
+}
+
+#quote {
+    color: var(--cyan)
+}
+
+.header {
+    border: var(--border-width) solid var(--yellow);
+}
+
+.header .window-title {
+    border-left: var(--border-width) solid var(--yellow);
+    border-right: var(--border-width) solid var(--yellow);
+}
+
+.setting-select {
+    background: transparent;
+    border: var(--border-width) solid var(--border);
+    color: var(--text);
+}
+
+.content {
+    border: var(--border-width) solid var(--green);
+    color: var(--text);
+}
+
+.content .window-title {
+    border-left: var(--border-width) solid var(--green);
+    border-right: var(--border-width) solid var(--green);
+}
+
+.clock {
+    border: var(--border-width) solid var(--violet);
+    color: var(--text);
+}
+
+.clock .window-title {
+    border-left: var(--border-width) solid var(--violet);
+    border-right: var(--border-width) solid var(--violet);
+}
+
+.system {
+    border: var(--border-width) solid var(--cyan);
+    color: var(--text);
+}
+
+.system .window-title {
+    border-left: var(--border-width) solid var(--cyan);
+    border-right: var(--border-width) solid var(--cyan);
+}
+
+.system > p > .label {
+    color: var(--cyan);
+}
+
+footer p {
+    color: var(--text);
+}
+
+.link {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.link:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+select > option {
+    background-color: var(--background);
+    padding: 0;
+    border: none;
+}
+
+.link-active {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.link-active:hover {
+    text-decoration: underline;
+}
+
+/* fieldset:after {
+    content: "Some Text";
+    position: absolute;
+    margin-top: -24px;
+    right: 50%;
+    background-color: var(--background);
+    color: var(--window-title);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+} */

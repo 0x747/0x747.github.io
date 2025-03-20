@@ -9,7 +9,7 @@
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="stylesheet" id="themeStylesheet" href="/assets/styles/solarized-dark.css">
-    <title>home</title>
+    <title>attributions</title>
 </head>
 <body onload="getRandomQuote()">
     <div class="container">
@@ -30,7 +30,7 @@
                 <a href="https://github.com/0x747/" target="_blank">github</a>
             </fieldset>
             
-            <fieldset class="window settings no-js-hidden">
+            <fieldset class="window settings">
                 <legend class="window-title">settings</legend>
                 <select name="theme-select" class="setting-select" onchange="changeTheme(this.value)">
                     <option value="0" selected>Solarized Dark</option>
@@ -47,20 +47,20 @@
 
         <fieldset class="window content" id="contentContainer">
             <div id="mainContent">
-                <legend class="window-title">about</legend>
-                    <article>
-                        <p>
-                            I'm an Information Technology graduate, and I'll be pursuing a master's degree in Artificial Intelligence (AI)
-                            at NJIT in Fall 2025. <br><br>
-                            Although my primary focus is AI, I'm also interested in cybersecurity, particularly in threat prevention and privacy.
-                            My long-term aim is to apply AI in security applications. <br><br>
-                            So far most of my experience is in Python and web development, and I enjoy designing applications which are customizable and minimal. 
-                            This site is one such example, and it's design is based on terminal GUIs like Bashtop. Next, I'd like to add support for keyboard navigation to it. 
-                        </p><br>
-                    </article>
+                <legend class="window-title">attributions</legend>
+            <article id="main">
+                <p>This website makes use of the following open source projects.</p><br>
+                <h3>htmx</h3><br>
+                <p>License: Zero-Clause BSD (0BSD)</p>
+                <p>Usage: Handles AJAX requests and seamless content swapping</p>
+                <p>Link: <a class="link-active" href="https://github.com/bigskysoftware/htmx" target="_blank">github.com/bigskysoftware/htmx</a></p><br>
+                <h3>platform.js</h3><br>
+                <p>License: MIT (<a href="./LICENSE.txt" class="link-active" target="_blank">see LICENSE</a>)</p>
+                <p>Usage: To detect platform information and parse user agent</p>
+                <p>Link: <a href="https://github.com/bestiejs/platform.js" class="link-active" target="_blank">github.com/bestiejs/platform.js</a></p>
+            </article>
             </div>
         </fieldset>
-
 
         <div class="widgets">
             <!-- <fieldset class="window clock">
@@ -68,20 +68,8 @@
                 <p id="date"></p>
                 <p id="time"></p>
             </fieldset> -->
-            <noscript>
-                <fieldset class="window js-disabled">
-                    <legend class="window-title">noscript</legend>
-                    <p>JavaScript is disabled</p><br>
-                    <p>Settings and system widgets unavailable</p>
-                </fieldset>
-
-                <style>
-                    .no-js-hidden {
-                        display: none !important;
-                    }
-                </style>
-            </noscript>
-            <fieldset class="window system no-js-hidden">
+            
+            <fieldset class="window system">
                 <legend class="window-title">system</legend>
                 <p id="osContainer"><span class="label">os:</span> <span class="os"></span></p>
                 <p id="memoryContainer"><span class="label">ram:</span> <span class="memory"></span></p>
@@ -89,8 +77,8 @@
                 <a class="link" href="/site/system.html" hx-get="/site/system.html" 
                 hx-select="#mainContent" hx-target="#contentContainer" hx-swap="innerHTML" hx-push-url="true">see more</a>
             </fieldset>
-            
-            <fieldset class="window settings no-js-hidden">
+
+            <fieldset class="window settings">
                 <legend class="window-title">settings</legend>
                 <select name="theme-select" class="setting-select" onchange="changeTheme(this.value)">
                     <option value="0" selected>Solarized Dark</option>
@@ -123,11 +111,11 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/assets/modules/htmx.min.js"></script>
-    <script src="/assets/scripts/logos.js"></script>
     <script src="/assets/modules/platform.js"></script>
+    <script src="/assets/scripts/logos.js"></script>
     <script src="/assets/scripts/quotes.js"></script>
     <script src="/assets/scripts/settings.js"></script>
     <script src="/assets/scripts/system.js"></script>
+    <script src="/assets/modules/htmx.min.js"></script>
 </body>
 </html>
